@@ -1,6 +1,13 @@
 import webbrowser
 import requests
+from pygame import mixer
 
+#zadanie 3
+mixer.init()
+mixer.music.load(".\song.mp3")
+mixer.music.play()
+
+#zadanie 4
 for i in range(3):
     pageUrl = input("Podaj adres strony: ")
     date = input("Podaj date: ")
@@ -11,7 +18,7 @@ for i in range(3):
     webbrowser.open(page)
     print()
 
-
+#zadanie 5
 # W Pythonie kod zrodłowy jest przetwarzany przez interpreter, ktory przetwarza kod linia po linii w czasie rzeczywistym,a następnie wykonuje go bezposrednio
 # Interpreter jest programem, ktory tlumaczy kod zrodlowy na kod maszynowy
 
