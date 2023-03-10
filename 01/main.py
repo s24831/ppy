@@ -24,4 +24,3 @@ for i in range(3):
 
 # W Java kod źródłowy jest kompilowany do kodu bajtowego, który jest następnie wykonywany przez maszynę wirtualną Javy
 # JVM jest programem, ktory dziala multiplatformowo i zapewnia warstwe miedzy kodem bajtowym a komputerem
-
