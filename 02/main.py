@@ -48,6 +48,6 @@ if __name__ == '__main__':
         'Jak często średnio czytasz książki?',
         'Po jakie gatunki książek sięgasz najczęściej?'
     ]
-    for i in range(len(questions)):
-        response = input(f"pytanie: {questions[i]}")
+    for i in questions:
+        response = input(f"pytanie: {i}")
         print(f"odpowiedz: {response}")
