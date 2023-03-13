@@ -39,6 +39,7 @@ if __name__ == '__main__':
 
     #zadanie 3
     questions = [
+        'Podaj imie i nazwisko:'
         'Najczęstszym sposobem spędzania wolnego czasu jest dla Ciebie:',
         'W jakich okolicznościach czytasz książki najczęściej?',
         'Jeżeli spędzasz czas wolny czytając książki, jaki jest główny powód takiego wyboru?',
@@ -47,6 +48,6 @@ if __name__ == '__main__':
         'Jak często średnio czytasz książki?',
         'Po jakie gatunki książek sięgasz najczęściej?'
     ]
-    for i in range(7):
+    for i in range(len(questions)):
         response = input(f"pytanie: {questions[i]}")
         print(f"odpowiedz: {response}")
