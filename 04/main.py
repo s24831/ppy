@@ -26,7 +26,7 @@ def is_prime(*args) -> None:
 
 
 def do_cezar(message: str, count: int, optional_coding=[]) -> str:
-    message_temp = list(message)
+    message_temp = list(message.lower())
     if not optional_coding:
         for i in range(len(message_temp)):
             if message_temp[i].isalpha():
@@ -42,4 +42,4 @@ def do_cezar(message: str, count: int, optional_coding=[]) -> str:
 if __name__ == '__main__':
     print(panel_calc(10, 10, 1, 1, 10))
     is_prime(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    print(do_cezar("message z!", 1, ['a', 'B']))
+    print(do_cezar("message z!", 1))
