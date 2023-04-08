@@ -1,4 +1,2 @@
-test@gmail.com,kamil,kaminski,70,3.5,MAILED
-test2@gmail.com,lukasz,kwasniewicz,100,5,GRADED
-test@gmail.com,kamil,kaminski,70
-test2@gmail.com,lukasz,kwasniewicz,100
+test@gmail.com,1,1,70.0,3.5,GRADED
+testtttt@gmail.com,1,2,80.0,4.0,GRADED
