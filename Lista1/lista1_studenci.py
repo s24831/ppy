@@ -34,15 +34,15 @@ print(w_2)
 # Przed JS nadal musi znajdować się python w strukturze takiego samego typu jak w przykladowej lista_3.
 # 2pkt
 lista_3 = [[{1: 'java', 0: ('python', 'R')}, 'c++'], ['word', 'excel']]
-
-w_3 = "PODAJ WYNIK"
+lista_3[0][0][0] = ('python', 'JS')
+w_3 = lista_3[0][0][0][1]
 print(w_3)
 
 # 4. Jakiego typu dane z poniższych nie mogą być kluczami słownika?
 # boolean,float,int,string,tuple,list,set. Odpowiedź umieśc w stringu w_4
 # 1 pkt
 
-w_4 = "PODAJ WYNIK"
+w_4 = "list, set"
 print(w_4)
 
 # 5. Dla stringa wypisz
@@ -59,10 +59,8 @@ print(w_5)
 # jakikolwiek znak wystąpił dokładnie 3 razy. Wyświetl Tak jeżeli wystąpił,
 # Nie jeżeli nie wystąpił.
 # 1 pkt
-if 3 in {v: s_5.count(v) for v in set(s_5)}.values():
-    w_6 = "Tak"
-else:
-    w_6 = "Nie"
+
+w_6 = "Tak" if 3 in {v: s_5.count(v) for v in set(s_5)}.values() else "Nie"
 print(w_6)
 
 
@@ -72,12 +70,8 @@ print(w_6)
 # 3pkt
 
 def palindrom(s):
-    s = s.lower()
-    c = s
-    for i in range(len(s) - 1):
-        if not s[i].isalpha():
-            c = c.replace(s[i], '')
-    return c == c[::-1]
+    s = ''.join(filter(str.isalpha, s)).lower()
+    return s == s[::-1]
 
 
 s_7_1 = "Nowy Targ, góry, Zakopane – na pokazy róg, graty won"
@@ -120,10 +114,10 @@ n_9 = 6
 def fibonacci(n):
     if n < 1:
         return 0
-    p, c = 0, 1
+    prev, current = 0, 1
     for i in range(n - 1):
-        p, c = c, p + c
-    return c
+        prev, current = current, prev + current
+    return current
 
 
 print(fibonacci(n_9))
@@ -136,7 +130,17 @@ print(fibonacci(n_9))
 
 
 def binary_search(lista, e):
-    pass
+    left = 0
+    right = len(lista) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if lista[mid] == e:
+            return mid
+        elif lista[mid] < e:
+            left = (left + right) // 2 + 1
+        else:
+            right = (left + right) // 2 - 1
+    return None
 
 
 l_10 = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768]
